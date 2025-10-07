@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>소미의 생일 축하 편지</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f1724;
+            /* deep navy */
+            --card: #0b1220;
+            --accent: #fffbfa;
+            /* warm orange */
+            --muted: #aab2c3;
+            color-scheme: dark;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Nanum Gothic', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial
+        }
+
+        body {
+            background: radial-gradient(1200px 400px at 10% 10%, rgba(196, 65, 12, 0.08), transparent),
+                radial-gradient(800px 300px at 90% 90%, rgba(255, 255, 255, 0.02), transparent),
+                var(--bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        #snow {
+            background: none;
+            font-family: Androgyne;
+            background-image: url('./슈팡.jpg');
+            height: 100%;
+            left: 0;
+            top: 0;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.3;
+            -webkit-animation: snow 10s linear infinite alternate;
+            -moz-animation: snow 10s linear infinite alternate;
+            -ms-animation: snow 10s linear infinite alternate;
+            animation: snow 10s linear infinite alternate;
+        }
+
+        @keyframes snow {
+            0% {
+                background-position: 0px 0px, 0px 0px, 0px 0px;
+            }
+
+            50% {
+                background-position: 500px 500px, 100px 200px, -100px 150px;
+            }
+
+            100% {
+                background-position: 500px 1000px, 200px 400px, -100px 300px;
+            }
+        }
+
+        @-moz-keyframes snow {
+            0% {
+                background-position: 0px 0px, 0px 0px, 0px 0px;
+            }
+
+            50% {
+                background-position: 500px 500px, 100px 200px, -100px 150px;
+            }
+
+            100% {
+                background-position: 400px 1000px, 200px 400px, 100px 300px;
+            }
+        }
+
+        @-webkit-keyframes snow {
+            0% {
+                background-position: 0px 0px, 0px 0px, 0px 0px;
+            }
+
+            50% {
+                background-position: 500px 500px, 100px 200px, -100px 150px;
+            }
+
+            100% {
+                background-position: 500px 1000px, 200px 400px, -100px 300px;
+            }
+        }
+
+        @-ms-keyframes snow {
+            0% {
+                background-position: 0px 0px, 0px 0px, 0px 0px;
+            }
+
+            50% {
+                background-position: 500px 500px, 100px 200px, -100px 150px;
+            }
+
+            100% {
+                background-position: 500px 1000px, 200px 400px, -100px 300px;
+            }
+        }
+
+        .wrap {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 8px 30px rgba(2, 6, 23, 0.7);
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .title h1 {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--accent)
+        }
+
+        .subtitle {
+            margin: 6px 0 0;
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        .message {
+            width: 100%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+            padding: 18px;
+            border-radius: 12px;
+            white-space: pre-wrap;
+            line-height: 1.6;
+            color: #e6eef8;
+            font-size: 15px;
+            border: 1px dashed rgba(255, 255, 255, 0.03);
+            min-height: 240px;
+            overflow: auto;
+        }
+
+
+
+        button {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 8px 12px;
+            border-radius: 10px;
+            color: #e6eef8;
+            cursor: pointer
+        }
+
+        button.primary {
+            background: white;
+            border: none;
+            color: black
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 14px
+        }
+
+        .card-meta {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.03)
+        }
+
+        .foot {
+            margin-top: 14px;
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        @media (max-width:880px) {
+            .card {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        .image {
+            width: 100%;
+        }
+
+        .image img {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="card" id="card">
+            <div>
+                <div class="title">
+                    <h1>생일 축하함!!!!!!!!!!!!!!!!</h1>
+                </div>
+
+                <div class="message" id="message">
+                    벌써 2025년 개큰 휴일이 왔다
+                    뭔가 믿을 수 없으셈 벌써 2025년 막바지라고???
+                    그냥 믿을수 없다...
+
+                    나는 이번 연휴가 되어
+                    할아바이 산소에 가서 축축한
+                    잔디밭에서 절하고 왔다... 몸살걸릴것같다...
+
+                    언젠간 내가 해외여행을 보내드려야겠다고 다짐함...
+                    이 지긋지긋한 샤머니즘의 고리를 끊어 낼 수 있겠지...?
+                    해내자... 해내보자....
+                    일단 많이 지났지만 생일 축하허고
+                    개맛있는거 먹으면서 햄복하게 살자고용!!!
+
+                    캬~~~~ 이게 삶이지 하믄서 고오급 와인 마실테야...
+
+                    님도 개빡센 시험 싸다구 내려쳐서 이기자 화이똥!
+                </div>
+
+                <div class="controls">
+                    <button id="downloadBtn" class="primary">❤이거누르지마세요❤</button>
+                </div>
+            </div>
+            <div class="image">
+                <img src="./images.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="snow"></div>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script>
+        const downloadBtn = document.getElementById('downloadBtn');
+
+        function getRawText() {
+            // 메시지를 DOM에서 가져와서 줄바꿈을 \\n으로 바꿔서 QR에 넣는다.
+            return messageEl.textContent.trim();
+        }
+
+        downloadBtn.addEventListener('click', async () => {
+            const node = document.getElementById('card');
+            downloadBtn.textContent = '바이러스인척하기';
+            try {
+                const canvas = await html2canvas(node, { scale: 2, backgroundColor: null });
+                const url = canvas.toDataURL('image/png');
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'message_card.png';
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+            } catch (e) {
+                alert('이미지 생성 실패');
+            }
+            downloadBtn.textContent = '다운로드버튼이었습니다~';
+        });
+
+
+    </script>
+</body>
+
+</html>

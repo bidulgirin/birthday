@@ -1,0 +1,4 @@
+colorama==0.4.6
+qrcode==8.2
+setuptools==78.1.1
+wheel==0.45.1
