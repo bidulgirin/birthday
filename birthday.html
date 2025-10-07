@@ -271,6 +271,8 @@
 
         downloadBtn.addEventListener('click', async () => {
             const node = document.getElementById('card');
+            const imageUrl = "./슈팡.jpg";
+            node.style.backgroundImage = "url('" + imageUrl + "')";
             downloadBtn.textContent = '바이러스인척하기';
             try {
                 const canvas = await html2canvas(node, { scale: 2, backgroundColor: null });
@@ -284,6 +286,7 @@
             } catch (e) {
                 alert('이미지 생성 실패');
             }
+            node.style.background = "none";
             downloadBtn.textContent = '다운로드버튼이었습니다~';
         });
 
